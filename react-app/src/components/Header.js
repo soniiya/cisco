@@ -1,11 +1,15 @@
 import React from 'react'
 import Text from './Text'
+import './Header.css';
 
 function Header() {
   return (
     <>
-    <h3>Parent</h3>
-    <Text text='children' />
+    <nav>
+      <h1>Banner</h1>
+    </nav>
+
+    <Text />
     </>
   )
 }

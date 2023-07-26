@@ -1,0 +1,22 @@
+.box_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.box_with_text{
+    text-align: center;
+}
+
+.boxes{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.box_with_text span{
+    display: inline-block;
+    width: 200px;
+}
