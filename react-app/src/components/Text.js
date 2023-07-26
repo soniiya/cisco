@@ -2,14 +2,15 @@ import React,{useState,useEffect} from 'react'
 import './Text.css'
 
 function Text() {
-  const [api,setApi] = useState([]);
+  const [ipv4,setIpv4] = useState([]);
+  const [ipv6,setIpv6] = useState([]);
 
   useEffect(()=>{
-    const fetchdata = async() => {
+    const fetchIpv4 = async() => {
         try{
-            const res = await fetch('https://api64.ipify.org?format=json');
+            const res = await fetch('https://api.ipify.org?format=json');
             const data = await res.json();
-            setApi(data);
+            setIpv4(data);
 
             console.log(data)
         }
@@ -17,7 +18,21 @@ function Text() {
             console.log(err)
         }
     }
-    fetchdata();
+    fetchIpv4();
+
+    const fetchIpv6 = async() =>{
+        try{
+            const res = await fetch('https://api64.ipify.org?format=json');
+            const data = await res.json();
+            setIpv6(data);
+
+            console.log(data)
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
+    fetchIpv6();
   },[])
     
   return (
@@ -27,13 +42,13 @@ function Text() {
     <div className="box_container">
         <div className='box_with_text'>
             <div className="boxes">
-            <span>{api.ip}</span>
+            <span>{ipv4.ip}</span>
             </div>
             <h2>IP V4</h2>
         </div>
         <div className='box_with_text'>
             <div className="boxes">
-            <span>{api.ip}</span>
+            <span>{ipv6.ip}</span>
             </div>
             <h2>IP V6</h2>
         </div>
