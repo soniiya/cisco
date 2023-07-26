@@ -1,9 +1,11 @@
 import React from 'react'
+import Text from './Text'
 
-function Header({text}) {
+function Header() {
   return (
     <>
-    <h3>Header</h3>
+    <h3>Parent</h3>
+    <Text text='children' />
     </>
   )
 }
