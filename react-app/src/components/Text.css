@@ -10,13 +10,16 @@
 }
 
 .boxes{
-    width: 200px;
-    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 60px;
     border: 2px solid black;
     border-radius: 10px;
 }
 
-.box_with_text span{
+.box_with_text h2{
     display: inline-block;
     width: 200px;
 }
