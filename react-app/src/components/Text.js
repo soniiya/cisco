@@ -12,7 +12,7 @@ function Text() {
             const data = await res.json();
             setIpv4(data);
 
-            console.log(data)
+            //console.log(data)
         }
         catch(err){
             console.log(err)
@@ -26,7 +26,7 @@ function Text() {
             const data = await res.json();
             setIpv6(data);
 
-            console.log(data)
+           // console.log(data)
         }
         catch(err){
             console.log(err)
